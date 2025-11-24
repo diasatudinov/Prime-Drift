@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "loaderViewLogoPD.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
