@@ -2,14 +2,47 @@
 //  PDLevelsView.swift
 //  Prime Drift
 //
-//  Created by Dias Atudinov on 25.11.2025.
 //
 
 import SwiftUI
 
 struct PDLevelsView: View {
+    @StateObject var user = ZZUser.shared
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            
+            VStack {
+                
+                HStack(alignment: .center) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                        
+                    } label: {
+                        Image(.backIconPD)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: ZZDeviceManager.shared.deviceType == .pad ? 100:60)
+                    }
+                    
+                    Spacer()
+                    
+                    ZZCoinBg()
+                    
+                }.padding(.horizontal).padding([.top])
+                
+                Spacer()
+                
+            }
+        }.background(
+            ZStack {
+                Image(.appBgPD)
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
+            }
+        )
     }
 }
 

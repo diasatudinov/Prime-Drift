@@ -1,13 +1,20 @@
+//
+//  ZZAchievementsViewModel.swift
+//  Prime Drift
+//
+//
+
+
 import SwiftUI
 
 class ZZAchievementsViewModel: ObservableObject {
     
     @Published var achievements: [NEGAchievement] = [
-        NEGAchievement(image: "achieve1ImageSB", title: "achieve1TextCB", isAchieved: false),
-        NEGAchievement(image: "achieve2ImageSB", title: "achieve2TextCB", isAchieved: false),
-        NEGAchievement(image: "achieve3ImageSB", title: "achieve3TextCB", isAchieved: false),
-        NEGAchievement(image: "achieve4ImageSB", title: "achieve4TextCB", isAchieved: false),
-        NEGAchievement(image: "achieve5ImageSB", title: "achieve5TextCB", isAchieved: false),
+        NEGAchievement(image: "achieve1ImagePD", title: "achieve1TextPD", isAchieved: false),
+        NEGAchievement(image: "achieve2ImagePD", title: "achieve2TextPD", isAchieved: false),
+        NEGAchievement(image: "achieve3ImagePD", title: "achieve3TextPD", isAchieved: false),
+        NEGAchievement(image: "achieve4ImagePD", title: "achieve4TextPD", isAchieved: false),
+        NEGAchievement(image: "achieve5ImagePD", title: "achieve5TextPD", isAchieved: false),
     ] {
         didSet {
             saveAchievementsItem()
